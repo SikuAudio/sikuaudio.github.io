@@ -1,0 +1,28 @@
+*{
+	background-color: rgb( 20, 20, 20);
+	text-align: center;
+	color: white;
+	font-family: monospace;
+	font-variant: small-caps;
+	font-weight: 300;
+}
+
+h1{
+	letter-spacing: 4px;
+	font-size: 45px;
+}
+
+h2{
+	letter-spacing: 2px;
+	font-size: 35px;
+}
+
+p{
+	letter-spacing: 1px;
+	font-size: 20px;
+}
+
+a{
+	letter-spacing: 2px;
+	font-size: 18px;
+}
