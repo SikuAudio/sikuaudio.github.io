@@ -1,0 +1,56 @@
+* {
+    background-color: rgb(20, 20, 20);
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-variant: small-caps;
+    font-weight: 100;
+}
+
+hr {
+  margin-top: 32px;
+  border: none;
+}
+
+hr.solid {
+  border-top: 1px solid rgb(40, 40, 40);
+}
+
+h1 {
+    letter-spacing: 4px;
+    font-size: 48px;
+}
+
+h1:hover {
+	color: turquoise;
+}
+
+h2 {
+    letter-spacing: 2px;
+    font-size: 36px;
+}
+
+h3 {
+    letter-spacing: 2px;
+    font-size: 28px;
+}
+
+p {
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+a:hover {
+	color: turquoise;
+}
+
+a.name:link {
+	color: white;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+a.name:hover {
+	color: turquoise;
+}
