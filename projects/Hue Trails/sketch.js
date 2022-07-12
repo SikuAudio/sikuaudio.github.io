@@ -6,8 +6,8 @@ function setup () {
   createCanvas(windowWidth, windowHeight)
   background(0)
 
-  x = width / 2
-  y = height / 2
+  x = width * 0.5
+  y = height * 0.5
   r = 0
 
   xoff = 0
