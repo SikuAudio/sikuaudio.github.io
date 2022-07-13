@@ -3,8 +3,12 @@ let x, y, xoff, yoff, r, grow, h, s, b
 function setup () {
   colorMode(HSB)
   rectMode(CENTER)
-  createCanvas(windowWidth, windowHeight)
-  background(0)
+  if (windowHeight > windowWidth) {
+    cnv = createCanvas(windowWidth, windowWidth)
+  } else {
+    cnv = createCanvas(windowHeight, windowHeight)
+  }
+  background(3)
 
   x = width * 0.5
   y = height * 0.5
