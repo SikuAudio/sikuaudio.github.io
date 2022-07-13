@@ -50,6 +50,10 @@ a:hover {
     color: turquoise;
 }
 
+a.name:visited {
+    color: white;
+}
+
 a.name:link {
     color: white;
     letter-spacing: 2px;
