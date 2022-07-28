@@ -13,6 +13,7 @@ let choices = [
 ];
 
 function setup() {
+  noCursor();
   // Set color mode to hsb
   colorMode(HSB);
   // Create a canvas that covers the whole viewport
