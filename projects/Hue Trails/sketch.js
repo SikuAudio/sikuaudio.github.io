@@ -1,66 +1,67 @@
-let x, y, xoff, yoff, r, grow, h, s, b
+let x, y, xoff, yoff, r, grow, h, s, b;
 
-function setup () {
-  colorMode(HSB)
-  rectMode(CENTER)
+function setup() {
+  noCursor();
+  colorMode(HSB);
+  rectMode(CENTER);
   if (windowHeight > windowWidth) {
-    cnv = createCanvas(windowWidth, windowWidth)
+    cnv = createCanvas(windowWidth, windowWidth);
   } else {
-    cnv = createCanvas(windowHeight, windowHeight)
+    cnv = createCanvas(windowHeight, windowHeight);
   }
-  background(3)
+  background(3);
 
-  x = width * 0.5
-  y = height * 0.5
-  r = 0
+  x = width * 0.5;
+  y = height * 0.5;
+  r = 0;
 
-  xoff = 0
-  yoff = 0
+  xoff = 0;
+  yoff = 0;
 
-  grow = true
+  grow = true;
 
-  h = 0
-  s = 0
-  b = 100
+  h = 0;
+  s = 0;
+  b = 100;
 
-  hueDir = true
+  hueDir = true;
 }
 
-function draw () {
-  fill(100)
+function draw() {
+  fill(100);
 
-  x = noise(xoff) * width
-  y = noise(yoff) * height
+  x = noise(xoff) * width;
+  y = noise(yoff) * height;
 
-  xoff += 0.005
-  yoff += 0.004
+  xoff += 0.005;
+  yoff += 0.004;
 
   if (r > 200) {
-    grow = false
+    grow = false;
   } else if (r < 5) {
-    grow = true
+    grow = true;
   }
 
   if (grow) {
-    r += 0.1
-    constrain((s += 0.1), 0, 100)
+    r += 0.1;
+    constrain((s += 0.1), 0, 100);
   } else {
-    r -= 0.1
-    constrain((s -= 0.1), 20, 100)
+    r -= 0.1;
+    constrain((s -= 0.1), 20, 100);
   }
 
   if (h < 0) {
-    hueDir = true
+    hueDir = true;
   } else if (h > 360) {
-    hueDir = false
+    hueDir = false;
   }
   if (hueDir) {
-    constrain((h += 0.1), 0, 360)
+    constrain((h += 0.1), 0, 360);
   } else {
-    constrain((h -= 0.1), 0, 360)
+    constrain((h -= 0.1), 0, 360);
   }
 
-  stroke(0, 0.6)
-  fill(h, s, b)
-  circle(x, y, r)
+  stroke(0, 0.6);
+  fill(h, s, b);
+  circle(x, y, r);
 }
